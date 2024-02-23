@@ -7,8 +7,8 @@ services:
     env_file:
       - .env
     environment:
-      POSTGRES_USER : ${DATABASE_USER}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER : iranja
+      POSTGRES_PASSWORD: ajnari
+      POSTGRES_DB: five-database
     ports:
       - "5432:5432"
