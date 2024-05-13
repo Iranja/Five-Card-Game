@@ -9,9 +9,13 @@ import { MajorsComponent } from "majors/majors.component"
 import { MajorsResolver } from "majors/majors.resolver"
 import { MajorStudentsResolver } from "majors/major-students/major-students.resolver"
 import { MajorStudentsComponent } from "majors/major-students/major-students.component"
+import { LoginComponent } from "login/login.component"; // Importez le LoginComponent
+import { RegisterComponent } from "./register/register.component"; // Importez le LoginComponent ici
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+  { path: "login", component: LoginComponent }, // Ajoutez la route pour la page de login
+  { path: "register", component: RegisterComponent },
   {
     path: "students",
     component: StudentsComponent,

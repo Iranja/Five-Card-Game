@@ -1,27 +1,37 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.takima.back.controllers;
 
 import com.takima.back.models.Major;
 import com.takima.back.models.Student;
 import com.takima.back.services.MajorService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
-@RequestMapping("majors")
+@RequestMapping({"majors"})
 @RestController
-@RequiredArgsConstructor
 public class MajorController {
     private final MajorService majorService;
 
-    @GetMapping("")
+    @GetMapping({""})
     public List<Major> findAll() {
-        return majorService.findAll();
+        return this.majorService.findAll();
     }
 
-    @GetMapping("/{id}/students")
+    @GetMapping({"/{id}/students"})
     public List<Student> getStudentsOfMajor(@PathVariable Long id) {
-        return majorService.getStudentsOfMajor(id);
+        return this.majorService.getStudentsOfMajor(id);
+    }
+
+    public MajorController(final MajorService majorService) {
+        this.majorService = majorService;
     }
 }

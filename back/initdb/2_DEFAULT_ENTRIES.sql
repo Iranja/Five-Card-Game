@@ -1,3 +1,4 @@
+/*
 INSERT INTO majors (id, name, description) VALUES (1, 'Ingéniérie du Numérique', 'Ouaiiis du code partout');
 INSERT INTO majors (id, name, description) VALUES (2, 'Structure & Matériaux', 'Beaucoup de béton et des poutres (snif elle a été renomée)');
 INSERT INTO majors (id, name, description) VALUES (3, 'Aéronautique & Espace', 'Vive le vent');
@@ -21,5 +22,6 @@ INSERT INTO courses (id, name, hours) VALUES (6, 'Maths', 30);
 INSERT INTO courses (id, name, hours) VALUES (7, 'Java', 30);
 INSERT INTO courses (id, name, hours) VALUES (8, 'Lean Management', 30);
 INSERT INTO student_course (id, student_id, course_id) VALUES (1, 1, 7);
-
+*/
+INSERT INTO "User" (username, email, password) VALUES ('Iranja', 'iranja.rabari@gmail.com', '$2a$10$cu36dybIvucgijujU1BDwO.wfWCyFzA79GHQLKX4OEPZ4jIDkzANG');
 

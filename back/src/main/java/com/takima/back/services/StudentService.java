@@ -1,65 +1,76 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.takima.back.services;
 
 import com.takima.back.DAO.StudentDao;
 import com.takima.back.DTO.StudentDto;
 import com.takima.back.DTO.StudentMapper;
 import com.takima.back.models.Student;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Objects;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@RequiredArgsConstructor
 public class StudentService {
     private final StudentDao studentDao;
 
     public List<Student> findAll() {
-        Iterable<Student> it = studentDao.findAll();
-        List <Student> users = new ArrayList<>();
+        Iterable<Student> it = this.studentDao.findAll();
+        List<Student> users = new ArrayList<>();
+        Objects.requireNonNull(users);
         it.forEach(users::add);
-        return users ;
+        return users;
     }
 
     public Student getById(Long id) {
-        return studentDao.findById(id).orElseThrow();
+        return (Student)this.studentDao.findById(id).orElseThrow();
     }
 
     @Transactional
     public void deleteById(Long id) {
-        studentDao.deleteById(id);
+        this.studentDao.deleteById(id);
     }
 
     @Transactional
     public void addStudent(StudentDto studentDto) {
         Student student;
         try {
-            student = StudentMapper.fromDto(studentDto, null);
-        } catch (IOException e) {
-            throw new RuntimeException("Error with Student image", e);
+            student = StudentMapper.fromDto(studentDto, (Long)null);
+        } catch (IOException var4) {
+            throw new RuntimeException("Error with Student image", var4);
         }
 
-        studentDao.save(student);
+        this.studentDao.save(student);
     }
 
     @Transactional
     public void updateStudent(StudentDto studentDto, Long id) {
-        studentDao.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Student doesn't exist"));
+        this.studentDao.findById(id).orElseThrow(() -> {
+            return new NoSuchElementException("Student doesn't exist");
+        });
+
         Student student;
         try {
             student = StudentMapper.fromDto(studentDto, id);
-        } catch (IOException e) {
-            throw new RuntimeException("Error with Student image", e);
+        } catch (IOException var5) {
+            throw new RuntimeException("Error with Student image", var5);
         }
-        studentDao.save(student);
+
+        this.studentDao.save(student);
     }
 
     public List<Student> searchByMajorAndCourse(int majorId, int courseId) {
-        return studentDao.findByMajorIdAndCourseId(majorId, courseId);
+        return this.studentDao.findByMajorIdAndCourseId(majorId, courseId);
+    }
+
+    public StudentService(final StudentDao studentDao) {
+        this.studentDao = studentDao;
     }
 }
