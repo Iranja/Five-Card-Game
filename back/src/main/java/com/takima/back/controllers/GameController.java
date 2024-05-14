@@ -1,7 +1,7 @@
 package com.takima.back.controllers;
 
 import com.takima.back.DTO.GameDto;
-import com.takima.back.five_game.Partie;
+import com.takima.back.controllers.five_game.Partie;
 import com.takima.back.models.Game;
 import com.takima.back.services.GameService;
 import org.springframework.http.ResponseEntity;
