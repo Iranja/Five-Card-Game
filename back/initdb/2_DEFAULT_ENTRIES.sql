@@ -1,4 +1,4 @@
-INSERT INTO Gamer(username, email, password) VALUES ('Iranja', 'iranja.rabari@gmail.com', '12345678');
+INSERT INTO Gamer(username, email, password) VALUES ('Iranja', 'iranja.rabari@gmail.com', '123456');
 
 INSERT INTO Game (user_id, place, points, date, time)
 VALUES (1, '1er', 66, '2024-05-14', '14:30:00');
