@@ -1,0 +1,13 @@
+<div class="historique-container">
+  <h2>{{ username }} - Historique des parties</h2>
+  <div class="scroll-box">
+    <ul>
+      <li *ngFor="let game of games">
+        <p><strong>Date:</strong> {{ game.date | date: 'dd/MM/yyyy' }}</p>
+        <p><strong>Heure:</strong> {{ convertTimeToDateTime(game.time) | date: 'HH:mm:ss' }}</p>
+        <p><strong>Place:</strong> {{ game.place }}</p>
+        <p><strong>Points:</strong> {{ game.points }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

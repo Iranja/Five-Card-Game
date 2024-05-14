@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.subscription = this.userService.login(this.user.username, this.user.password).subscribe({
       next: (response) => {
         // Authentification réussie, redirection vers la page home
-        this.router.navigate(["/home"]);
+        this.router.navigate([""]);
       },
       error: (error) => {
         // Gestion de l'erreur, affichage du message d'erreur

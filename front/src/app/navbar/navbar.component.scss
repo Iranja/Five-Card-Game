@@ -2,7 +2,7 @@
 
 nav {
   height: 80px;
-  background: linear-gradient(to right, theme.$common-purple, theme.$common-red);
+  background: linear-gradient(to right, #001f3f, #0074D9);
 
   div {
     height: 100%;
@@ -29,6 +29,15 @@ nav {
   margin-left: 50px;
   padding: 0;
   display: flex;
+  button {
+    background-color: transparent; // Rend le fond transparent
+    border: none; // Supprime la bordure
+    padding: 0; // Supprime le rembourrage
+    margin: 0; // Supprime la marge
+    cursor: pointer; // Change le curseur en pointeur au survol
+    color: white; // Couleur du texte
+    font-size: 16px; // Taille de la police
+  }
 }
 
 .mat-list-base .mat-list-item {

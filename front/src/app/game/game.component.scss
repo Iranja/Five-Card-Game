@@ -1,0 +1,191 @@
+:host {
+  font-family: 'Game Over', sans-serif; // Utilisation de la police Press Start 2P
+  background-color: #01203c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 93vh; // Ajuste la hauteur de l'élément à la taille de la fenêtre
+
+  .container {
+    width: 100%; /* Utilisation de 100% pour occuper toute la largeur disponible */
+    height: 100vh; /* Utilisation de 100vh pour occuper 100% de la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01203c;
+  }
+
+  .card {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .bottom-center-hand {
+    display: flex; // Utilisation de Flexbox
+    justify-content: center; // Alignement horizontal au centre
+    align-items: flex-end; // Alignement vertical en bas
+    position: absolute; // Positionnement absolu pour le placer en bas au milieu
+    bottom: 0; // Alignement en bas
+    left: 50%; // Alignement au milieu horizontalement
+    transform: translateX(-50%); // Correction pour le positionnement horizontal
+  }
+
+
+  .bottom-center {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .left-middle {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    transform: translateY(-50%);
+  }
+
+  .left-middle-hand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    transform: translateY(-50%);
+
+    .card {
+      margin-bottom: -50px; // Ajustez cette valeur pour réduire l'espacement vertical entre les cartes
+    }
+
+    .rotated {
+      transform: rotate(90deg);
+    }
+  }
+
+  .top-left {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+  }
+
+  .top-left-hand {
+    display: flex; // Utilisation de Flexbox
+    justify-content: center; // Alignement horizontal au centre
+    align-items: flex-end; // Alignement vertical en bas
+    position: absolute; // Positionnement absolu pour le placer en bas au milieu
+    top: 7%; // Alignement en bas
+    left: 30%; // Alignement au milieu horizontalement
+    transform: translateX(-50%); // Correction pour le positionnement horizontal
+  }
+
+  .top-right {
+    position: absolute;
+    top: 30%;
+    right: 30%;
+  }
+
+  .top-right-hand {
+    display: flex; // Utilisation de Flexbox
+    justify-content: center; // Alignement horizontal au centre
+    align-items: flex-end; // Alignement vertical en bas
+    position: absolute; // Positionnement absolu pour le placer en bas au milieu
+    top: 7%; // Alignement en bas
+    right: 10%; // Alignement au milieu horizontalement
+    transform: translateX(-50%); // Correction pour le positionnement horizontal
+  }
+
+  .right-middle {
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    transform: translateY(-50%);
+  }
+
+  .right-middle-hand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 60%;
+    right: 1%;
+    transform: translateY(-50%);
+
+    .card {
+      margin-bottom: -50px; // Ajustez cette valeur pour réduire l'espacement vertical entre les cartes
+    }
+
+    .rotated {
+      transform: rotate(90deg);
+    }
+  }
+
+  .left-middle.rotated,
+  .right-middle.rotated {
+    transform: translateY(-50%) rotate(90deg); // Inclinaison de 90 degrés
+  }
+
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Nouvelles règles pour positionner la pioche et le joker côte à côte */
+  .pioche {
+    left: calc(50% - 75px); /* Calcul pour centrer horizontalement la pioche */
+  }
+
+  .joker {
+    left: calc(50% + 25px); /* Calcul pour centrer horizontalement le joker à côté de la pioche */
+  }
+
+  .player1-name {
+    position: absolute;
+    top: -30px; /* Ajustez cette valeur selon vos besoins */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ordi2-name {
+    position: absolute;
+    top: 110%; /* Ajustez cette valeur selon vos besoins */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ordi3-name {
+    position: absolute;
+    top: 110%; /* Ajustez cette valeur selon vos besoins */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ordi1-name {
+    position: absolute;
+    top: 50%; /* Ajustez cette valeur selon vos besoins */
+    right: -80%;
+    transform: translateY(-50%) rotate(90deg); // Inclinaison de 90 degrés
+  }
+
+  .ordi4-name {
+    position: absolute;
+    top: 50%; /* Ajustez cette valeur selon vos besoins */
+    left: -80%;
+    transform: translateY(50%) rotate(270deg); // Inclinaison de 90 degrés
+  }
+
+  .name {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+
+}

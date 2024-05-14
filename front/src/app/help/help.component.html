@@ -1,0 +1,67 @@
+<div class="help-container">
+  <h2>Help</h2>
+
+  <div class="dropdown" (click)="toggleDropdown('gameRules')">
+    <button class="dropbtn">Game rules</button>
+    <div class="dropdown-content" *ngIf="showDropdown === 'gameRules'">
+      <p>
+        "Le five" est un jeu qui se joue avec un jeu de cartes standard. Voici les règles de base du jeu :<br>
+        <br>
+        *Matériel :*<br>
+        - Un jeu de cartes de 52 cartes.<br>
+        <br>
+        *Fonction des cartes*<br>
+        ⁃	Les cartes de 2 à 10 ont une valeur nominale correspondant au numéro indiqué sur la carte. Elles sont utilisées pour former des combinaisons afin d'atteindre un total de 5 points ou moins<br>
+        ⁃	Les cartes (rois, reines et valets) valent 10. Elles sont utilisées pour former des combinaisons afin d’atteindre un total de 5 points ou moins<br>
+        ⁃	Les As valent 1 chacun. Comme les autres cartes numériques, ils peuvent être utilisés pour former des combinaisons pour atteindre un total de 5 points ou moins.<br>
+        ⁃	Les cartes spéciales (Jokers et Jokers désignés) : Après la distribution des cartes, un Jocker depuis le reste du paquet de cartes est désigné comme Jocker en plus des Jockers de base. Par exemple, un Joker peut être utilisé comme n'importe quelle autre carte pour former des combinaisons. (Jocker = 0)<br>
+        ⁃	Les cartes qui restent vont former la pioche (face cachée)<br>
+        *Nombre de joueurs :*<br>
+        - De 3 à 5 joueurs.<br>
+        <br>
+        *Points:*<br>
+        ⁃	Les joueurs débute le jeu avec 0 point et à chaque fin de manche, les points sont calculés, en sommant les points de chaque carte de leur main.<br>
+        ⁃	Le joueur ayant gagné la manche a donc une main de 0 point.<br>
+        <br>
+        ⁃	Lorsqu’on atteint pile 50 points à la fin d’une manche, on redescend à 25 points. De même, lorsqu’on atteint 100 points à la fin d’une manche, on redescend à 50 points.<br>
+        ⁃	Si un joueur dépasse les 100 points, il perd le jeu.<br>
+        *Déroulement du jeu :*<br>
+        1. Distribuez à chaque joueur 5 cartes<br>
+        <br>
+        2. Les joueurs peuvent regarder leurs propres cartes, mais ils ne peuvent pas les montrer aux autres.<br>
+        <br>
+        3. Le jeu se joue par tours, dans le sens des aiguilles d'une montre en débutant la première manche avec le joueur le plus jeune. Pour les manches suivantes, on débute avec le gagnant.<br>
+        <br>
+        4. Lors de leur tour, les joueurs doivent d’abord poser une carte depuis leur main. Cette carte doit être placée face visible, devant la personne qui se trouve à gauche du joueur. Ensuite le joueur décide de piocher une carte de la pioche ou prendre la carte supérieure, poser par son joueur de droite. Concernant le joueur qui ouvre la première manche, il a le choix entre la pioche et une carte tirée de la pioche puis placer devant lui.<br>
+        <br>
+        5.	Lorsque le joueur pense que ses cartes totalisent 5 points ou moins que n'importe quel autre joueur, il peut poser ses cartes à son tour pour gagner la manche. Dans ce cas, le jeu s'arrête et les cartes des autres joueurs sont révélées pour calculer les points de chaque joueur.<br>
+        <br>
+        6. Si un joueur ayant 5 points ou moins, pose ces cartes, mais que son score est supérieur au score d’un autre joueur, il reçoit une pénalité de 25 points.<br>
+        <br>
+        7. Si deux joueurs ou plus ayant 5 points ou moins, posent leurs cartes, et qu’ils ont le même score, alors ils auront le même nombre de points.<br>
+        <br>
+        8. Le jeu continue avec les joueurs restants jusqu'à ce qu'il ne reste que deux joueurs. Le vainqueur sera celui avec le moins de point.<br>
+        <br>
+      </p>
+    </div>
+  </div>
+
+  <div class="dropdown" (click)="toggleDropdown('ourTeam')">
+    <button class="dropbtn">Our team</button>
+    <div class="dropdown-content" *ngIf="showDropdown === 'ourTeam'">
+      <p>
+        Nous sommes une équipe de créateurs qui, après avoir passé nos pauses à jouer à un jeu de cartes improvisé, avons décidé de développer « Five » pour notre projet de technologie web. Notre inspiration est née du besoin de remplacer un jeu de cartes perdu lors de nos temps libres. Avec un initiateur d'idée plein d'enthousiasme, un développeur web talentueux et un concepteur graphique créatif, nous sommes déterminés à offrir une expérience de jeu en ligne captivante et divertissante avec « Five ».
+
+      </p>
+    </div>
+  </div>
+
+  <div class="dropdown" (click)="toggleDropdown('contactUs')">
+    <button class="dropbtn">Contact us</button>
+    <div class="dropdown-content" *ngIf="showDropdown === 'contactUs'">
+      <p>Nous contacter à l'adresse : iranja.rabari@gmail.com</p>
+    </div>
+  </div>
+
+  <button class="btn" (click)="goBack()">Back</button>
+</div>

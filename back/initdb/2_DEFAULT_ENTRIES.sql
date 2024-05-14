@@ -1,27 +1,31 @@
-/*
-INSERT INTO majors (id, name, description) VALUES (1, 'Ingéniérie du Numérique', 'Ouaiiis du code partout');
-INSERT INTO majors (id, name, description) VALUES (2, 'Structure & Matériaux', 'Beaucoup de béton et des poutres (snif elle a été renomée)');
-INSERT INTO majors (id, name, description) VALUES (3, 'Aéronautique & Espace', 'Vive le vent');
-INSERT INTO majors (id, name, description) VALUES (4, 'Data Engineering', 'Trop cool plein de données à ordonner');
-INSERT INTO majors (id, name, description) VALUES (5, 'Energie & Environnement', 'On est full green');
-INSERT INTO majors (id, name, description) VALUES (6, 'Engineering Management', 'Des managers de qualité');
-INSERT INTO majors (id, name, description) VALUES (7, 'Ingénierie & Santé', 'On connait tous les os et tous les muscles du corps humain');
-INSERT INTO majors (id, name, description) VALUES (8, 'Ingénierie & Architecture durable', 'Objectif 0 carbon');
-INSERT INTO majors (id, name, description) VALUES (9, 'Design Industriel Durable', 'Ca existait pas pour la P2022 ça');
+INSERT INTO Gamer(username, email, password) VALUES ('Iranja', 'iranja.rabari@gmail.com', '12345678');
 
-INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (1, 'Paul', 'Harrohide', '2002-06-15', 1);
-INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (2, 'Jean', 'Bonbeur', '2001-08-21', 1);
-INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (3, 'Alain', 'Térieur', '2000-01-11', 1);
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '1er', 66, '2024-05-14', '14:30:00');
 
-INSERT INTO courses (id, name, hours) VALUES (1, 'Spanish', 30);
-INSERT INTO courses (id, name, hours) VALUES (2, 'German', 30);
-INSERT INTO courses (id, name, hours) VALUES (3, 'Internet of Things', 30);
-INSERT INTO courses (id, name, hours) VALUES (4, 'Thermodynamic', 30);
-INSERT INTO courses (id, name, hours) VALUES (5, 'Anatomy', 30);
-INSERT INTO courses (id, name, hours) VALUES (6, 'Maths', 30);
-INSERT INTO courses (id, name, hours) VALUES (7, 'Java', 30);
-INSERT INTO courses (id, name, hours) VALUES (8, 'Lean Management', 30);
-INSERT INTO student_course (id, student_id, course_id) VALUES (1, 1, 7);
-*/
-INSERT INTO "User" (username, email, password) VALUES ('Iranja', 'iranja.rabari@gmail.com', '$2a$10$cu36dybIvucgijujU1BDwO.wfWCyFzA79GHQLKX4OEPZ4jIDkzANG');
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '2e', 77, '2024-05-15', '15:30:00');
 
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '3e', 88, '2024-05-16', '16:30:00');
+
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '4e', 99, '2024-05-17', '17:30:00');
+
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '5e', 111, '2024-05-18', '18:30:00');
+
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '2e', 77, '2024-05-15', '15:30:00');
+
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '3e', 88, '2024-05-16', '16:30:00');
+
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '4e', 99, '2024-05-17', '17:30:00');
+
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '5e', 111, '2024-05-18', '18:30:00');
+
+INSERT INTO Game (user_id, place, points, date, time)
+VALUES (1, '1er', 66, '2024-05-19', '14:30:00');

@@ -1,44 +1,58 @@
-.login-container {
+@import url('https://fonts.googleapis.com/css2?family=Game+Over&display=swap');
+
+:host {
+  font-family: 'Game Over', sans-serif; // Utilisation de la police Press Start 2P
+  background-color: #01203c;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  justify-content: space-between;
+  height: 93vh; // Ajuste la hauteur de l'élément à la taille de la fenêtre
+  color: white;
 
-  h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-
-  form {
+  .login-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
 
-    label {
-      font-size: 1.2em;
-      margin-bottom: 5px;
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+
     }
 
-    input {
-      width: 300px;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        width: 150px;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     }
 
     button {
-      width: 150px;
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      margin-top: 20px;
+      background-color: #28a745;
     }
-  }
-
-  button {
-    margin-top: 20px;
-    background-color: #28a745;
   }
 }

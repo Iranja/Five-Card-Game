@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Game+Over&display=swap');
+:host {
+  font-family: 'Game Over', sans-serif; // Utilisation de la police Press Start 2P
+  background-color: #01203c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 93vh; // Ajuste la hauteur de l'élément à la taille de la fenêtre
+
+
+  .historique-container {
+    font-family: 'Game Over', sans-serif;
+    background-color: #01203c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Ombre légère pour créer une sensation de profondeur
+    max-height: 100%; /* Hauteur maximale de la boîte */
+    overflow-y: auto; /* Ajoute une barre de défilement vertical si nécessaire */
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #1f2a38; // Couleur de fond pour chaque élément de la liste
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Ombre légère pour chaque élément
+
+        p {
+          margin: 0;
+          font-size: 1.2em;
+
+          strong {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-box {
+    padding: 10px;
+  }
+}
