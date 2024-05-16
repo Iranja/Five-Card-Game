@@ -38,4 +38,9 @@ export class RegisterComponent {
     // Redirection vers la page de login
     this.router.navigate(["/login"]);
   }
+
+  goBack(): void {
+    this.router.navigate([""]); // Remplacez '/' par l'URL de la page précédente si nécessaire
+  }
+
 }

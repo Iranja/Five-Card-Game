@@ -1,47 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Game+Over&display=swap');
-
 :host {
-  font-family: 'Game Over', sans-serif; // Utilisation de la police Press Start 2P
-  background-color: #01203c;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 93vh; // Ajuste la hauteur de l'élément à la taille de la fenêtre
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 90vh; /* Utilisation de 100vh pour occuper la taille de l'écran */
+  background: linear-gradient(45deg, #0a3047, #061b2d, #01203c, #040f19, #061b2d, #0a3047, #01203c);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
 
   .centered {
-    text-align: center;
     width: 100%;
-    flex-grow: 1; // Pour occuper tout l'espace disponible en hauteur
+    height: 90%; /* Ajustement de la hauteur pour occuper 90% de la taille de l'écran */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+
+  /* CSS */
+  .bottom-right, .bottom-left {
+    position: absolute;
+    bottom: 0;
+  }
+
+  /* CSS */
+  .bottom-right {
+    width: 3%;
+    right: 0;
+    margin-bottom: 2%; /* Espacement par rapport au bas de la fenêtre */
+    margin-right: 5%; /* Espacement par rapport au bord droit de la fenêtre */
+    text-align: right; /* Aligner l'image à droite */
+  }
+
+  .help-btn {
+    margin-top: 2%;
+  }
+
   .bottom-left {
-    margin-bottom: 10px; // Ajoute un espacement en bas pour le bouton "Paramètres"
-    margin-left: 10px; // Ajoute un espacement à gauche pour le bouton "Paramètres"
+    width: 5%;
+    left: 0;
+    margin-bottom: 2%; /* Espacement par rapport au bas de la fenêtre */
+    margin-left: 5%; /* Espacement par rapport au bord gauche de la fenêtre */
+    text-align: left; /* Aligner l'image à gauche */
+  }
+
+  .clickable-image {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .logo {
-    width: 400px; // Ajustez la taille selon vos besoins (plus grand que précédemment)
-  }
-
-  .btn {
-    margin: 10px;
-    padding: 15px 30px;
-    width: 200px; // Largeur fixe pour tous les boutons
-    font-size: 1.2em;
-    background-color: white;
-    color: black; // Changement de couleur du texte en noir
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #0074D9; // Changement de couleur au survol
-    }
+    width: 20%; // Ajustez la taille selon vos besoins (plus grand que précédemment)
   }
 }
-

@@ -1,6 +1,11 @@
 <div class="centered">
   <img src="assets/logo-five.png" alt="Logo" class="logo">
-  <button class="btn" (click)="goToLogin()">Play</button>
-  <button class="btn" (click)="goToHelp()">Help</button>
-  <button class="btn">Options</button>
+  <img src="assets/play.png" class="clickable-image" alt="Login" (click)="goToGame()">
+  <img src="assets/help.png" class="clickable-image help-btn" alt="Login" (click)="goToHelp()">
 </div>
+<!-- Image cliquable en bas à droite -->
+<img src="assets/profile.png" class="clickable-image bottom-right" alt="Login" (click)="goToProfile()">
+
+<!-- Image cliquable en bas à gauche -->
+<img src="assets/options.png" class="clickable-image bottom-left" alt="Options" (click)="goToOptions()">
+

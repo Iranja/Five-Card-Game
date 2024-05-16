@@ -2,7 +2,7 @@
   <h2>Help</h2>
 
   <div class="dropdown" (click)="toggleDropdown('gameRules')">
-    <button class="dropbtn">Game rules</button>
+    <img src="assets/gamerules.png" alt="Game rules" class="dropbtn-img clickable-image">
     <div class="dropdown-content" *ngIf="showDropdown === 'gameRules'">
       <p>
         "Le five" est un jeu qui se joue avec un jeu de cartes standard. Voici les règles de base du jeu :<br>
@@ -47,21 +47,20 @@
   </div>
 
   <div class="dropdown" (click)="toggleDropdown('ourTeam')">
-    <button class="dropbtn">Our team</button>
-    <div class="dropdown-content" *ngIf="showDropdown === 'ourTeam'">
-      <p>
-        Nous sommes une équipe de créateurs qui, après avoir passé nos pauses à jouer à un jeu de cartes improvisé, avons décidé de développer « Five » pour notre projet de technologie web. Notre inspiration est née du besoin de remplacer un jeu de cartes perdu lors de nos temps libres. Avec un initiateur d'idée plein d'enthousiasme, un développeur web talentueux et un concepteur graphique créatif, nous sommes déterminés à offrir une expérience de jeu en ligne captivante et divertissante avec « Five ».
-
-      </p>
-    </div>
+  <img src="assets/ourteam.png" alt="Our team" class="dropbtn-img clickable-image">
+  <div class="dropdown-content" *ngIf="showDropdown === 'ourTeam'">
+    <p>
+      Nous sommes une équipe de créateurs qui, après avoir passé nos pauses à jouer à un jeu de cartes improvisé, avons décidé de développer « Five » pour notre projet de technologie web. Notre inspiration est née du besoin de remplacer un jeu de cartes perdu lors de nos temps libres. Avec un initiateur d'idée plein d'enthousiasme, un développeur web talentueux et un concepteur graphique créatif, nous sommes déterminés à offrir une expérience de jeu en ligne captivante et divertissante avec « Five ».
+    </p>
   </div>
+</div>
 
   <div class="dropdown" (click)="toggleDropdown('contactUs')">
-    <button class="dropbtn">Contact us</button>
+    <img src="assets/mailus.png" alt="Mail us" class="dropbtn-img clickable-image">
     <div class="dropdown-content" *ngIf="showDropdown === 'contactUs'">
       <p>Nous contacter à l'adresse : iranja.rabari@gmail.com</p>
     </div>
   </div>
 
-  <button class="btn" (click)="goBack()">Back</button>
+  <img src="assets/back.png" alt="Back" class="back-img clickable-image" (click)="goBack()">
 </div>

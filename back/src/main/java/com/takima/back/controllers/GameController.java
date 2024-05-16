@@ -24,7 +24,7 @@ public class GameController {
     public String startGame(@RequestBody String username) {
         String message = "Partie lancée avec succès pour " + username;
         System.out.println(message);
-        Partie partie = new Partie(username);
+        //Partie partie = new Partie(username);
         return message;
     }
 

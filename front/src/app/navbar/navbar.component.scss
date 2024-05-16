@@ -1,18 +1,19 @@
-@use "src/theme";
-
 nav {
-  height: 80px;
+  height: 10%;
   background: linear-gradient(to right, #001f3f, #0074D9);
+  display: flex; /* Utiliser la flexbox */
+  align-items: center; /* Centrer verticalement les éléments */
+  padding: 0 20px; /* Ajouter un peu de rembourrage sur les côtés */
 
   div {
-    height: 100%;
-    display: flex;
-    align-items: center;
+    display: flex; /* Utiliser la flexbox pour les éléments internes */
+    align-items: center; /* Centrer verticalement les éléments internes */
 
     img {
-      margin-left: 20px;
       height: 60px;
+      margin-right: 20px; /* Espacement à droite du logo */
       transition: .3s;
+      cursor: pointer;
 
       &:hover {
         transform: scale(1.1);
@@ -23,26 +24,30 @@ nav {
       text-decoration: underline;
     }
   }
+
+  .right-elements {
+    margin-left: auto; /* Aligner les éléments de droite à droite */
+  }
 }
 
 .mat-nav-list {
-  margin-left: 50px;
   padding: 0;
   display: flex;
+
   button {
-    background-color: transparent; // Rend le fond transparent
-    border: none; // Supprime la bordure
-    padding: 0; // Supprime le rembourrage
-    margin: 0; // Supprime la marge
-    cursor: pointer; // Change le curseur en pointeur au survol
-    color: white; // Couleur du texte
-    font-size: 16px; // Taille de la police
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
   }
 }
 
 .mat-list-base .mat-list-item {
   font-size: large;
-  color: theme.$white;
+  color: white;
   transition: .3s;
 
   &:hover {

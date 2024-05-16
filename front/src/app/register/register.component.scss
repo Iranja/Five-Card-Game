@@ -1,20 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Game+Over&display=swap');
 
 :host {
-  font-family: 'Game Over', sans-serif; // Utilisation de la police Press Start 2P
-  background-color: #01203c;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 93vh; // Ajuste la hauteur de l'élément à la taille de la fenêtre
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 90vh; /* Utilisation de 100vh pour occuper la taille de l'écran */
+  background: linear-gradient(45deg, #0a3047, #061b2d, #01203c, #040f19, #061b2d, #0a3047, #01203c);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
   color: white;
+
+  .clickable-image {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+    width: 25%; /* Ajoutez la largeur souhaitée */
+    height: auto;
+  }
+
+  .back-img {
+    width: 8%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 2%; /* Ajoute un peu de marge depuis le bas de la page */
+    margin-left: 2%; /* Ajoute un peu de marge depuis le bord gauche de la page */
+  }
 
   .register-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 10%;
 
     h1 {
       font-size: 2em;

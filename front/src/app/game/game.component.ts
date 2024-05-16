@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from "@angular/core"
 import { GameService } from '../services/game.service';
 import { UserService } from '../services/user.service';
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-game',
@@ -9,12 +11,12 @@ import { UserService } from '../services/user.service';
 })
 export class GameComponent implements OnInit {
   message: string = '';
-
-  constructor(private gameService: GameService, private userService: UserService) { }
+  protected username: string = '';
+  constructor(private gameService: GameService, private router: Router,private userService: UserService) { }
 
   ngOnInit(): void {
-    const username = this.userService.getUsername();
-    this.gameService.startGame(username).subscribe({
+    this.username = this.userService.getUsername();
+    this.gameService.startGame(this.username).subscribe({
       next: response => {
         this.message = response;
       },
@@ -24,4 +26,6 @@ export class GameComponent implements OnInit {
       }
     });
   }
+
+
 }

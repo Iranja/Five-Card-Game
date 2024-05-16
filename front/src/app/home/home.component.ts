@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { UserService } from "../services/user.service";
 
 @Component({
-  selector: "epf-home",
+  selector: "five-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"]
 })
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  goToLogin() {
+  goToGame() {
     // Vérifier si l'utilisateur est connecté
     const isAuthenticated = this.userService.isAuthenticated();
 
@@ -30,5 +30,22 @@ export class HomeComponent implements OnInit {
 
   goToHelp() {
     this.router.navigate(["/help"]);
+  }
+
+  goToProfile() {
+    // Vérifier si l'utilisateur est connecté
+    const isAuthenticated = this.userService.isAuthenticated();
+
+    // Si l'utilisateur est connecté, rediriger vers la page du jeu ("/game")
+    if (isAuthenticated) {
+      //this.router.navigate(["/profile"]);
+    } else {
+      // Sinon, rediriger vers la page de connexion
+      this.router.navigate(["/login"]);
+    }
+  }
+
+  goToOptions() {
+    //this.router.navigate(["/options"]);
   }
 }

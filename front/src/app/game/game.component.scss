@@ -1,24 +1,24 @@
 :host {
-  font-family: 'Game Over', sans-serif; // Utilisation de la police Press Start 2P
-  background-color: #01203c;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 93vh; // Ajuste la hauteur de l'élément à la taille de la fenêtre
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 90vh; /* Utilisation de 100vh pour occuper la taille de l'écran */
+  background: linear-gradient(45deg, #0a3047, #061b2d, #01203c, #040f19, #061b2d, #0a3047, #01203c);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
 
   .container {
     width: 100%; /* Utilisation de 100% pour occuper toute la largeur disponible */
-    height: 100vh; /* Utilisation de 100vh pour occuper 100% de la hauteur de la fenêtre */
+    height: 90vh; /* Utilisation de 100vh pour occuper 100% de la hauteur de la fenêtre */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #01203c;
   }
 
   .card {
-    width: 100px;
-    height: 150px;
+    width: 70px; /* Largeur fixe pour toutes les cartes */
+    height: 100px; /* Hauteur fixe pour toutes les cartes */
     object-fit: cover;
   }
 
@@ -27,7 +27,7 @@
     justify-content: center; // Alignement horizontal au centre
     align-items: flex-end; // Alignement vertical en bas
     position: absolute; // Positionnement absolu pour le placer en bas au milieu
-    bottom: 0; // Alignement en bas
+    bottom: 0%; // Alignement en bas
     left: 50%; // Alignement au milieu horizontalement
     transform: translateX(-50%); // Correction pour le positionnement horizontal
   }
@@ -42,7 +42,7 @@
 
   .left-middle {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 15%;
     transform: translateY(-50%);
   }
@@ -53,12 +53,12 @@
     justify-content: center;
     align-items: flex-start;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 1%;
     transform: translateY(-50%);
 
     .card {
-      margin-bottom: -50px; // Ajustez cette valeur pour réduire l'espacement vertical entre les cartes
+      margin-bottom: -30px; // Ajustez cette valeur pour réduire l'espacement vertical entre les cartes
     }
 
     .rotated {
@@ -68,7 +68,7 @@
 
   .top-left {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 30%;
   }
 
@@ -77,14 +77,14 @@
     justify-content: center; // Alignement horizontal au centre
     align-items: flex-end; // Alignement vertical en bas
     position: absolute; // Positionnement absolu pour le placer en bas au milieu
-    top: 7%; // Alignement en bas
+    top: 0%; // Alignement en bas
     left: 30%; // Alignement au milieu horizontalement
     transform: translateX(-50%); // Correction pour le positionnement horizontal
   }
 
   .top-right {
     position: absolute;
-    top: 30%;
+    top: 20%;
     right: 30%;
   }
 
@@ -93,14 +93,14 @@
     justify-content: center; // Alignement horizontal au centre
     align-items: flex-end; // Alignement vertical en bas
     position: absolute; // Positionnement absolu pour le placer en bas au milieu
-    top: 7%; // Alignement en bas
+    top: 0%; // Alignement en bas
     right: 10%; // Alignement au milieu horizontalement
     transform: translateX(-50%); // Correction pour le positionnement horizontal
   }
 
   .right-middle {
     position: absolute;
-    top: 60%;
+    top: 50%;
     right: 15%;
     transform: translateY(-50%);
   }
@@ -111,12 +111,12 @@
     justify-content: center;
     align-items: flex-start;
     position: absolute;
-    top: 60%;
+    top: 50%;
     right: 1%;
     transform: translateY(-50%);
 
     .card {
-      margin-bottom: -50px; // Ajustez cette valeur pour réduire l'espacement vertical entre les cartes
+      margin-bottom: -30px; // Ajustez cette valeur pour réduire l'espacement vertical entre les cartes
     }
 
     .rotated {
@@ -132,7 +132,7 @@
 
   .centered {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -184,7 +184,7 @@
   .name {
     color: white;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1vw;
   }
 
 

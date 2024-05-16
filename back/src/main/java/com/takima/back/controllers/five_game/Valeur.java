@@ -1,5 +1,8 @@
 package com.takima.back.controllers.five_game;
 
+import lombok.Getter;
+
+@Getter
 public enum Valeur {
     AS(1),
     DEUX(2),
@@ -22,7 +25,4 @@ public enum Valeur {
         this.valeurInt = valeurInt;
     }
 
-    public int getValeurInt() {
-        return valeurInt;
-    }
 }

@@ -44,4 +44,8 @@ export class LoginComponent implements OnInit {
     // Redirection vers la page de registration
     this.router.navigate(["/register"]);
   }
+
+  goBack(): void {
+    this.router.navigate([""]); // Remplacez '/' par l'URL de la page précédente si nécessaire
+  }
 }

@@ -30,6 +30,6 @@ public class Carte {
 
     @Override
     public String toString() {
-        return valeur + " de " + symbole;
+        return valeur + "_de_" + symbole;
     }
 }
