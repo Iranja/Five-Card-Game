@@ -58,7 +58,7 @@ Propose un accès à la page `Login`.
 ### Page Game
 _!En développement pour la v0.5_
 
-(_La logique du jeu a été codée en java mais fonctionne uniquement sur invite de commande pour le moment_)
+(_La logique du jeu a été codée en java dans le dossier `back/src/main/java/com/takima/back/controllers/five_game` . Le jeu fonctionne uniquement sur invite de commande pour le moment_)
 
 Permet de jouer contre l'ordinateur. (Bientôt une version en ligne!)
 ![Game](img-readme/game.png)
